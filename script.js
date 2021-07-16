@@ -92,7 +92,8 @@ res.map(res=>{
 }
 async function getdatas(){
     try{
-    var data = await fetch("https://www.anapioficeandfire.com/api/characters?page=1&pageSize=10")
+    var data = await fetch("https://www.anapioficeandfire.com/api/books?page=1&pageSize=10")
+     var res = await data.json();   
     console.log(res);
     
     
@@ -146,6 +147,8 @@ async function getchar(){
     var res = await fetch("https://www.anapioficeandfire.com/api/characters?page=2&pageSize=10")
     var resdata = await res.json();
     // console.log(resdata)
+ 
+
     for( var i=0;i<5;i++){
         var div6 = document.createElement('div')
         var h5 = document.createElement('h5')
@@ -163,7 +166,6 @@ async function getchar(){
     
     }
 }
-
 
 
 
