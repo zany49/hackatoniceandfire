@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap');
+
+/* body{
+    
+    background: black;
+} */
+.heading{
+  
+    text-align: center;
+    padding-top: 70px;
+    background-color: rgb(29, 29, 29);
+    color: white;
+    font-family: 'Anton', sans-serif;
+    
+    font-size: 60px !important;
+    padding-bottom: 60px;
+    margin: 0px;
+}
+#button1{
+   text-align: center;   
+   transition: 0.5s;
+   font-family: 'Assistant', sans-serif;
+}
+#button1:hover{
+    color: rgb(165, 230, 230) !important ;
+    background-color: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3,0 0 80px #2196f3 ;
+    transition-delay: 0.1s;
+}
+
+
+#container2{
+    
+    justify-content: center;
+    text-align: center;
+    
+   
+    
+}
+#book {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #333;
+    
+  }
+  #books {
+    background: #fff;
+    position: relative;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 650px;
+    color: #333;
+    flex-basis: width;
+    background-color: rgb(165, 230, 230);
+  }
+
+  #books:hover{
+    background: rgb(0,202,255);
+    background: linear-gradient(90deg, rgba(0,202,255,0.6082808123249299) 0%, rgba(253,32,29,0.5690651260504201) 64%);
+     color: black;
+     box-shadow: 0 0 10px white, 0 0 40px #2196f3 ;
+}
+#but2{
+    border-radius: 25px;
+    width: 150px;
+    padding: 8px;
+}
+#but2:hover{
+    background: rgb(150,93,255);
+    background: radial-gradient(circle, rgba(150,93,255,1) 29%, rgba(129,215,255,1) 79%);
+    box-shadow: 0 0 10px white;
+    transform: translateY(6px);
+}
+
+#button2{
+    text-align: center;   
+    transition: 0.5s;
+    margin-left: 10px;
+    font-family: 'Assistant', sans-serif;
+    
+ }
+ #button2:hover{
+     color: rgb(165, 230, 230) !important ;
+     background-color: #2196f3;
+     box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3,0 0 80px #2196f3 ;
+     transition-delay: 0.1s;
+ }
+ 
