@@ -154,6 +154,7 @@ async function getchar(){
         var h5 = document.createElement('h5')
         var gen = document.createElement('h5')
         var aliases = document.createElement('h5')
+        div6.setAttribute('class','div6')
         h5.innerText = ("Name:" + resdata[i].name);
         gen.innerText = ("Gender:" + resdata[i].gender);
         aliases.innerText = ("Aliases:" + resdata[i].aliases)
@@ -168,5 +169,30 @@ async function getchar(){
 }
 
 
+async function getchars(){
+    var res = await fetch("https://www.anapioficeandfire.com/api/characters?page=2&pageSize=10")
+    var resdata = await res.json();
+    // console.log(resdata)
+ 
+
+    for( var i=0;i<5;i++){
+        var div6 = document.createElement('div')
+        var h5 = document.createElement('h5')
+        var gen = document.createElement('h5')
+        var aliases = document.createElement('h5')
+
+        div6.setAttribute('class','div6')
+        h5.innerText = ("Name:" + resdata[i].name);
+        gen.innerText = ("Gender:" + resdata[i].gender);
+        aliases.innerText = ("Aliases:" + resdata[i].aliases)
+
+        
+        div6.appendChild(h5)
+        div6.appendChild(gen)
+        div6.appendChild(aliases)
+    document.getElementById("books").appendChild(div6)
+    
+    }
+}
 
 
