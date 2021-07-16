@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
 /* body{
     
     background: black;
@@ -54,6 +55,9 @@
     width: 650px;
     color: #333;
     flex-basis: width;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 20px !important;
+
     background-color: rgb(165, 230, 230);
   }
 
