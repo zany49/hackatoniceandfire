@@ -16,7 +16,7 @@ btn1.innerText = " FETCH DATA PAGE 1"
 var btn2 = document.createElement("button")
 btn2.setAttribute("class","  btn btn-outline-light")
 btn2.setAttribute("id","button2")
- btn2.setAttribute("onclick","getdata()")
+ btn2.setAttribute("onclick","getdatas()")
 btn2.innerText = " FETCH DATA PAGE 2 "
 
 div2.appendChild(h4)
@@ -90,35 +90,9 @@ res.map(res=>{
 
 
 }
-
-async function getchar(){
-    var res = await fetch("https://www.anapioficeandfire.com/api/books")
-    var resdata = await res.json();
-    // console.log(resdata)
-    for( var i=0;i<5;i++){
-        var div6 = document.createElement('div')
-        var h5 = document.createElement('h5')
-        var gen = document.createElement('h5')
-        var aliases = document.createElement('h5')
-        h5.innerText = ("Name:" + resdata[i].name);
-        gen.innerText = ("Gender:" + resdata[i].gender);
-        aliases.innerText = ("Aliases:" + resdata[i].aliases)
-
-        
-        div6.appendChild(h5)
-        div6.appendChild(gen)
-        div6.appendChild(aliases)
-    document.getElementById("books").appendChild(div6)
-    
-    }
-}
-
-
-
 async function getdatas(){
     try{
-    var data = await fetch("https://www.anapioficeandfire.com/api/characters?page=2&pageSize=10")
-    var res = await data.json();
+    var data = await fetch("https://www.anapioficeandfire.com/api/characters?page=1&pageSize=10")
     console.log(res);
     
     
@@ -144,7 +118,7 @@ async function getdatas(){
         publisher.innerText = ("📢 Publisher:"+ res.publisher)
         released.innerText = ("⏰Released:"+ res.released)
          button2.innerText = "characters";
-         button2.setAttribute("onclick","getchar()")
+         button2.setAttribute("onclick","getchars()")
          
          
         div4.appendChild(h3)
@@ -165,6 +139,29 @@ async function getdatas(){
         console.log(error)
     }  
     
+}
+
+
+async function getchar(){
+    var res = await fetch("https://www.anapioficeandfire.com/api/characters?page=2&pageSize=10")
+    var resdata = await res.json();
+    // console.log(resdata)
+    for( var i=0;i<5;i++){
+        var div6 = document.createElement('div')
+        var h5 = document.createElement('h5')
+        var gen = document.createElement('h5')
+        var aliases = document.createElement('h5')
+        h5.innerText = ("Name:" + resdata[i].name);
+        gen.innerText = ("Gender:" + resdata[i].gender);
+        aliases.innerText = ("Aliases:" + resdata[i].aliases)
+
+        
+        div6.appendChild(h5)
+        div6.appendChild(gen)
+        div6.appendChild(aliases)
+    document.getElementById("books").appendChild(div6)
+    
+    }
 }
 
 
